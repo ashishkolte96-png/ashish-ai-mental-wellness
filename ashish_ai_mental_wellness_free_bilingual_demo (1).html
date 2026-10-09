@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ashish AI Mental Wellness — Free Demo</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1b2638;--muted:#68768b;--line:#e3e9f1;--teal:#246b63;--mint:#e9f5f2;--blue:#edf2ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:18px max(18px,calc((100vw - 1100px)/2));background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:23px}.brand h1{font-size:18px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}.tag{font-size:12px;color:var(--teal);border:1px solid #b8d9d2;background:var(--mint);border-radius:99px;padding:7px 11px}
+main{max-width:1100px;margin:26px auto;padding:0 18px;display:grid;grid-template-columns:265px 1fr;gap:20px}
+aside,.chat{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:0 8px 28px #152c4508}
+aside{padding:20px;height:max-content}aside h2{font-size:15px;margin:0 0 8px}aside p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 15px}.topic{width:100%;text-align:left;padding:12px;border:1px solid var(--line);background:white;border-radius:12px;margin:6px 0;cursor:pointer;font:inherit;font-size:13px;color:var(--ink)}.topic:hover{background:#f6fbfa;border-color:#9ccbc2}.local{font-size:12px;line-height:1.55;padding:12px;margin-top:16px;background:#f2f7ff;border-radius:12px;color:#40536e}
+.chat{min-height:620px;display:flex;flex-direction:column;overflow:hidden}.chathead{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}.chathead strong{font-size:15px}.chathead small{color:var(--muted)}#messages{flex:1;max-height:450px;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:13px}.msg{max-width:88%;font-size:14px;line-height:1.65;padding:12px 14px;border-radius:15px;white-space:pre-wrap}.bot{background:#eff5f4;border:1px solid #e0eeeb;align-self:flex-start;border-bottom-left-radius:5px}.user{background:var(--blue);align-self:flex-end;border-bottom-right-radius:5px}.who{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.compose{display:flex;gap:9px;border-top:1px solid var(--line);padding:15px}.compose textarea{flex:1;min-width:0;min-height:48px;max-height:120px;resize:vertical;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:14px}.send{border:0;background:var(--teal);color:white;border-radius:12px;padding:0 17px;font-weight:650;cursor:pointer}.bottom{text-align:center;max-width:900px;margin:0 auto;padding:0 18px 22px;color:var(--muted);font-size:11px;line-height:1.6}
+@media(max-width:720px){main{grid-template-columns:1fr;margin:14px auto}.chat{min-height:560px}#messages{max-height:390px}.tag{display:none}header{padding:14px 16px}}
+</style></head>
+<body>
+<header><div class="brand"><div class="logo">✦</div><div><h1>Ashish AI Mental Wellness</h1><p>Reflect • Reset • Grow / सोचें • संभलें • आगे बढ़ें</p></div></div><span class="tag">FREE LOCAL DEMO</span></header>
+<main>
+<aside><h2>आज किस बारे में बात करें?</h2><p>किसी विषय को चुनें या नीचे चैट में अपना सवाल लिखें। / Pick a topic or type below.</p>
+<button class="topic" data-prompt="मुझे बहुत overthinking होती है। / I keep overthinking.">🌀 Overthinking</button>
+<button class="topic" data-prompt="मैं एक फैसले को लेकर uncertain हूँ। / I feel uncertain about a decision.">🌱 Uncertainty</button>
+<button class="topic" data-prompt="मुझे एक simple CBT thought-check exercise कराइए। / Guide me through a simple CBT exercise.">🧠 CBT अभ्यास / Exercise</button>
+<button class="topic" data-prompt="आज मेरा mood check करने में मदद करें। / Help me check in with my mood today.">☀️ Mood check-in</button>
+<div class="local"><strong>Privacy:</strong> यह demo आपके संदेश किसी सर्वर पर नहीं भेजता और चैट सेव नहीं करता। इसमें अपना नाम, फोन नंबर या बहुत निजी जानकारी न लिखें।</div>
+</aside>
+<section class="chat"><div class="chathead"><strong>Wellness Chat / बातचीत</strong><small>हिंदी + English</small></div>
+<div id="messages" aria-live="polite"><div class="msg bot"><div class="who">Ashish AI · Demo</div>नमस्ते! आप यहाँ हिंदी या English में बात कर सकते हैं। आज आपके मन में क्या चल रहा है?\n\nHello! You can write in Hindi or English. What's on your mind today?</div></div>
+<form class="compose" id="form"><textarea id="input" placeholder="अपना सवाल लिखें… / Type your message…" aria-label="Message"></textarea><button class="send" type="submit">Send ↗</button></form></section>
+</main><div class="bottom">यह पूरी तरह मुफ़्त, आपके ब्राउज़र में चलने वाला शुरुआती demo है। जवाब सीमित और नियम-आधारित हैं—यह अभी असली ChatGPT/AI API से जुड़ा नहीं है और मानसिक स्वास्थ्य पेशेवर की जगह नहीं लेता। संकट या तत्काल खतरे में स्थानीय आपातकालीन सेवा या भरोसेमंद व्यक्ति से संपर्क करें।</div>
+<script>
+const box=document.getElementById('messages'),input=document.getElementById('input');
+function add(s,who){let d=document.createElement('div');d.className='msg '+who;if(who==='bot'){let l=document.createElement('div');l.className='who';l.textContent='Ashish AI · Demo';d.appendChild(l)}let b=document.createElement('div');b.textContent=s;d.appendChild(b);box.appendChild(d);box.scrollTop=box.scrollHeight}
+function answer(s){let t=s.toLowerCase();
+if(/suicid|kill myself|hurt myself|आत्महत्या|खुद को नुकसान|मर जाना/.test(t))return "मुझे दुख है कि आप यह झेल रहे हैं। आपकी सुरक्षा सबसे ज़रूरी है। अगर अभी खुद को नुकसान पहुँचाने का खतरा है, तो स्थानीय emergency services से संपर्क करें और किसी भरोसेमंद व्यक्ति को अपने पास बुलाएँ। यह demo संकट सहायता सेवा नहीं है.\n\nI'm sorry you're going through this. If you may hurt yourself now, contact local emergency services and ask a trusted person to stay with you. This demo isn't crisis care.";
+if(/cbt|thought|विचार|अभ्यास|exercise/.test(t))return "आइए एक छोटा thought-check करें:\n1. क्या हुआ? सिर्फ़ तथ्य लिखें।\n2. आपके मन में कौन-सा विचार आया?\n3. भावना कितनी तीव्र है (0–10)?\n4. इस विचार के पक्ष और विपक्ष में क्या सबूत हैं?\n5. एक संतुलित विचार क्या हो सकता है?\n\nLet's try: facts → automatic thought → emotion (0–10) → evidence for/against → a more balanced thought.";
+if(/uncertain|uncertainty|decision|choose|choice|अनिश्चित|फैसला|निर्णय|confus/.test(t))return "अनिश्चितता कठिन लग सकती है। तीन चीज़ें अलग करें: (1) आपको क्या पता है, (2) क्या अभी पता नहीं है, और (3) एक छोटा कदम जो आप अभी उठा सकते हैं। यह फैसला किस बारे में है?\n\nUncertainty is uncomfortable. Separate what you know, what you don't know yet, and one small step you can take now. What decision are you facing?";
+if(/overthink|can't stop|cannot stop|सोच|ज़्यादा सोच|ज्यादा सोच|दिमाग/.test(t))return "यह थकाने वाला हो सकता है। पहले एक आरामदायक साँस लें और अपनी मुख्य चिंता एक वाक्य में लिखें। फिर पूछें: “क्या अगले 10 मिनट में कोई उपयोगी कदम उठा सकता/सकती हूँ, या यह अभी मेरे नियंत्रण से बाहर है?”\n\nThat can feel exhausting. Take a comfortable breath and write the worry in one sentence. Is there one useful step you can take in the next 10 minutes, or is it outside your control for now?";
+if(/mood|feel|feeling|sad|anxious|stress|मूड|उदास|तनाव|घबर/.test(t))return "बिना जज किए mood check करें: 0 से 10 तक, अभी आपका mood कितना है? कौन-सी बात उस पर असर डाल रही है—नींद, कोई घटना, कोई विचार या कुछ और?\n\nWithout judging yourself, rate your mood from 0–10. What might be affecting it—sleep, an event, a thought, or something else?";
+return "यह साझा करने के लिए धन्यवाद। हम इसे धीरे-धीरे समझ सकते हैं। अभी आपको किस चीज़ में मदद चाहिए—अपनी भावना समझने में, विचारों को देखने में, या एक छोटा अगला कदम तय करने में?\n\nThanks for sharing. Would it help more to understand the feeling, examine the thought, or choose one small next step?";
+}
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();let s=input.value.trim();if(!s)return;add(s,'user');input.value='';setTimeout(()=>add(answer(s),'bot'),180)});
+document.querySelectorAll('.topic').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.prompt;input.focus()}));
+input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();document.getElementById('form').requestSubmit()}});
+</script></body></html>
